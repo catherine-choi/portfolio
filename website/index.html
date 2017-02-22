@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title></title>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+  <style type="text/css">
+    section{
+      width:100%;
+      height: 500px;
+      border:1px solid black;
+      margin-top:50px;
+    }
+
+    .opened .firstrow{
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <button myname="part">Trigger</button>
+  <button myname="parts">Trigger</button>
+  <section id="container"></section>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      $("button").click(function(){
+        // hide grid
+        // $("body").addClass('opened')
+        var title = $(this).attr('myname');
+        openPage(title);
+      });
+
+      function openPage(title){
+        $.ajax({
+          context: $("#container"),
+          dataType: "html",
+          url: title + ".html",
+          success: function(results){
+            $("#container").html(results);
+          },
+          complete: function(){
+
+          }
+        });
+      }
+
+    });
+  </script>
+</body>
+</html>

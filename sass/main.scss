@@ -1,0 +1,1105 @@
+@import "../bourbon/bourbon";
+
+//MIXIN
+@mixin mymixin($myargument){
+  width: $myargument;
+}
+
+#sampleitem{
+  @include mymixin(10px);
+  // will show as width: 10px;
+}
+
+// VARIABLE
+$myvariable : 50px;
+#sampleitem{
+  height: $myvariable;
+  // will show as height: 50px;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  min-height: 101vh;
+}
+/*
+.welcome{
+  position: fixed;
+  left:0px;
+  top:0px;
+  width: 100%;
+  height: 100vh;
+  background: #ec008c;
+  opacity: 0.8;
+}
+
+.welcome2{
+  position: fixed;
+  left:0px;
+  top:0px;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../imgs/yoyo.jpg');
+  background-position: center;
+  background-size: cover;
+
+}
+*/
+
+
+
+.year{
+  margin-bottom: 50px;
+ font-size:20px;
+}
+
+.hidden .firstrow{
+  display:none;
+}
+
+/*
+.transitionX #template{
+  transform: translate(0,350px);
+  -webkit-transform: translate(0,350px);
+  transition: all 200s ease-in-out;
+  -webkit-transition: all 200s ease-in-out;
+}
+*/
+
+.menu{
+  position: fixed;
+  right:0px;
+  top: 0px;
+  background: #ec008c;
+  width: 0%;
+  height: 100vh;
+  opacity: 0;
+  transform: translateX(360px);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.trans{
+  opacity: 1;
+  transform: translateX(0px);
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+	-webkit-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+
+}
+
+.trans_r{
+  opacity: 0;
+  @include transform(translateX(0px));
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+	-webkit-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+
+}
+
+
+.logo_container{
+  width:74px;
+  height: 47px;
+  margin-top: 58px;
+  margin-left: 58px;
+  display: inline-block;
+  background-image: url('../imgs/logo.svg');
+}
+
+.logo_container:hover{
+  background-image: url('../imgs/logo_hover.svg');
+}
+
+.video{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu_container, .menu_container2{
+  width:74px;
+  height: 47px;
+  position: absolute;
+  right: 58px;
+  top: 98px;
+  display: none;
+
+}
+
+
+.menu_container, .menu_container2:hover{
+  cursor: pointer;
+
+}
+
+.menu_container{
+  background-image: url('../imgs/menu.svg');
+  background-repeat: no-repeat;
+}
+
+.menu_container:hover{
+  background-image: url('../imgs/menu_hover.svg');
+
+}
+
+.small_menu{
+
+
+  margin-right: 50px;
+  height: 500px;
+  margin-top: 20vh;
+}
+
+#filter{margin-top: -20px; position: absolute; right: 25px;}
+#filter li{font-size: 15px; margin-right: 45px; float: right; display: inline-block;}
+#filter li a:visited{color:black; cursor: pointer;}
+#filter li a:hover{color:#ec008c; cursor: pointer;}
+#filter li a:active{color: #ec008c; cursor: pointer;}
+
+#filter2{
+  padding-left: 0;
+  margin-top: 120px;
+  text-align: left;
+}
+
+#filter2 li{
+  font-size: 18px;
+  line-height: 70px;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+
+}
+
+#filter2 li a{color: black; cursor: pointer;}
+#filter2 li a:visited{color: black; cursor: pointer;}
+#filter2 li a:hover{color: white; cursor: pointer;}
+#filter2 li a:active{color: white; cursor: pointer;}
+
+
+
+
+.navigation{
+  align-items: baseline;
+
+}
+
+/*
+li {
+  font-size: 15px;
+  margin-right: 35px;
+  float: right;
+  display: inline-block;
+}
+
+
+li a {
+  display: block;
+  text-decoration: none;
+  padding-right: 58px;
+}
+*/
+li a:link {
+  color: black;
+}
+
+li a:hover {
+  color: #ec008c;
+}
+
+li a:visited {
+  color: black;
+}
+
+
+.firstrow{
+  margin-top: 25px;
+  float:left;
+  width: 100%;
+
+}
+
+
+.work{
+  margin-left: auto;
+  width: 25%;
+  left: auto;
+  right: auto;
+  height: 300px;
+  background: #F6F1F6;
+  margin: 7px 0;
+  text-align:center;
+  padding: 0;
+  float: left;
+  box-sizing: border-box;
+  border: 3px solid white;
+  margin-bottom: -6px;
+}
+
+.work:hover{
+  cursor: pointer;
+}
+
+.footer{
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 58px;
+  float: left;
+  color: black;
+  cursor: default;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* works */
+
+
+
+.name{
+  font-size: 30px;
+  color:white;
+  opacity: 0;
+  height: 264px;
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 30px;
+  -webkit-transition-duration: 0.5;
+  -moz-transition-duration: 0.5;
+  transition-duration: 0.5;
+  background: #ec008c;
+
+}
+
+.name:hover{
+  opacity: 0.8;
+  background: #ec008c;
+}
+
+.wsummerinny{
+  background-image: url('../imgs/home_summer.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.weverybodytalks{
+  background-image: url('../imgs/home_everybodytalks.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.wmemory{
+  background-image: url('../imgs/home_memory.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.wihadadream{
+  background-image: url('../imgs/home_ihadadream.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.wshed{
+  background-image: url('../imgs/home_shed.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wchanchan{
+  background-image: url('../imgs/home_chanchan.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wcanalwalk{
+  background-image: url('../imgs/home_canalwalk.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wmmmm{
+  background-image: url('../imgs/home_mmmm.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wfabricme{
+  background-image: url('../imgs/home_fabricme.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wtnc{
+  background-image: url('../imgs/home_tnc.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wtokyo{
+  background-image: url('../imgs/home_tokyo.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.wyellow{
+  background-image: url('../imgs/home_yellow.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wjulien{
+  background-image: url('../imgs/home_julien.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.wimperfect{
+  background-image: url('../imgs/home_imperfect.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wbird{
+  background-image: url('../imgs/home_bird.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wrighttime{
+  background-image: url('../imgs/home_righttime.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wdiagrams{
+  background-image: url('../imgs/home_diagrams.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.wsocks{
+  background-image: url('../imgs/home_socks.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.wjelly{
+  background-image: url('../imgs/home_jelly.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wseizethedate{
+  background-image: url('../imgs/home_seizethedate.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+@media (max-width: 1000px) {
+
+
+    .small_menu{
+
+      height: 500px;
+      margin-top: 20vh;
+
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+
+
+    }
+
+  .menu{
+    position: fixed;
+    right:0px;
+    top: 0px;
+    background: #ec008c;
+    width: 25%;
+    height: 100vh;
+    opacity: 0;
+    transform: translateX(360px);
+    text-align: left;
+    z-index: 0;
+    }
+
+  .trans{
+    opacity: 1;
+    transform: translateX(0px);
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+  	-webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+    z-index: 0;
+  }
+
+  .work{
+    margin-left: auto;
+    width: 33.3333333333%;
+    left: auto;
+    right: auto;
+    height: 300px;
+    background: #F6F1F6;
+    margin: 7px 0;
+    text-align:center;
+    padding: 0;
+    float: left;
+    box-sizing: border-box;
+    border: 3px solid white;
+    margin-bottom: -6px;
+  }
+
+  .logo_container{
+    width:74px;
+    height: 47px;
+    margin-top: 58px;
+    margin-left: 48px;
+    display: inline-block;
+  }
+
+  #filter{
+    display: none;
+  }
+
+  .navigation_bar {
+    font-size: 15px;
+    list-style-type: none;
+    margin-top: -20px;
+    display: none;
+  }
+
+  .menu_container, .menu_container2{
+    width: 60px;
+    height: 47px;
+    position: absolute;
+    right: 48px;
+    top: 98px;
+    display: inline-block;
+  }
+
+
+  .firstrow{
+    margin-top: 25px;
+  }
+
+  .footer{
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 48px;
+    float: left;
+    color: black;
+    cursor: default;
+  }
+
+  /* works */
+
+
+  .wsummerinny{
+    background-image: url('../imgs/home_summer.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .weverybodytalks{
+    background-image: url('../imgs/home_everybodytalks.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wmemory{
+    background-image: url('../imgs/home_memory.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wihadadream{
+    background-image: url('../imgs/home_ihadadream.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wshed{
+    background-image: url('../imgs/home_shed.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wchanchan{
+    background-image: url('../imgs/home_chanchan.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wcanalwalk{
+    background-image: url('../imgs/home_canalwalk.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wmmmm{
+    background-image: url('../imgs/home_mmmm.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wfabricme{
+    background-image: url('../imgs/home_fabricme.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wtnc{
+    background-image: url('../imgs/home_tnc.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wtokyo{
+    background-image: url('../imgs/home_tokyo.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wyellow{
+    background-image: url('../imgs/home_yellow.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wjulien{
+    background-image: url('../imgs/home_julien.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wimperfect{
+    background-image: url('../imgs/home_imperfect.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wbird{
+    background-image: url('../imgs/home_bird.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wrighttime{
+    background-image: url('../imgs/home_righttime.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wdiagrams{
+    background-image: url('../imgs/home_diagrams.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wsocks{
+    background-image: url('../imgs/home_socks.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wjelly{
+    background-image: url('../imgs/home_jelly.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wseizethedate{
+    background-image: url('../imgs/home_seizethedate.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+
+  .name{
+    font-size: 30px;
+    color:white;
+    opacity: 0;
+    height: 264px;
+    text-align: left;
+    padding-left: 10%;
+    padding-top: 30px;
+    transition-duration: 0.5;
+    background: #ec008c;
+
+  }
+}
+
+@media (max-width: 800px) {
+
+    .small_menu{
+
+      height: 500px;
+      margin-top: 20vh;
+
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+
+
+    }
+
+
+      .menu{
+        position: fixed;
+        right:0px;
+        top: 0px;
+        background: #ec008c;
+        width: 35%;
+        height: 100vh;
+        opacity: 0;
+        transform: translateX(360px);
+        text-align: left;
+        z-index: 0;
+      }
+
+    .trans{
+      opacity: 1;
+      transform: translateX(0px);
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+    	-webkit-transition: all .8s ease-in-out;
+      transition: all .8s ease-in-out;
+      z-index: 0;
+    }
+
+  .work{
+    margin-left: auto;
+    width: 50%;
+    left: auto;
+    right: auto;
+    height: 300px;
+    background: #F6F1F6;
+    margin: 7px 0;
+    text-align:center;
+    padding: 0;
+    float: left;
+    box-sizing: border-box;
+    border: 3px solid white;
+    margin-bottom: -6px;
+  }
+
+  .logo_container{
+    width:74px;
+    height: 47px;
+    margin-top: 58px;
+    margin-left: 38px;
+    display: inline-block;
+  }
+
+  .menu_container, .menu_container2{
+    width: 60px;
+    height: 47px;
+    position: absolute;
+    right: 38px;
+    top: 98px;
+    display: inline-block;
+  }
+
+  #filter{
+    display: none;
+  }
+  .navigation_bar {
+    font-size: 15px;
+    list-style-type: none;
+    margin-top: -20px;
+    display: none;
+  }
+
+  .firstrow{
+    margin-top: 25px;
+  }
+
+  .footer{
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 38px;
+    float: left;
+    color: black;
+    cursor: default;
+  }
+
+  /* works */
+
+  .wsummerinny{
+    background-image: url('../imgs/home_summer.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .weverybodytalks{
+    background-image: url('../imgs/home_everybodytalks.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wmemory{
+    background-image: url('../imgs/home_memory.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wihadadream{
+    background-image: url('../imgs/home_ihadadream.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wshed{
+    background-image: url('../imgs/home_shed.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wchanchan{
+    background-image: url('../imgs/home_chanchan.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wcanalwalk{
+    background-image: url('../imgs/home_canalwalk.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wmmmm{
+    background-image: url('../imgs/home_mmmm.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wfabricme{
+    background-image: url('../imgs/home_fabricme.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wtnc{
+    background-image: url('../imgs/home_tnc.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wtokyo{
+    background-image: url('../imgs/home_tokyo.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wyellow{
+    background-image: url('../imgs/home_yellow.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wjulien{
+    background-image: url('../imgs/home_julien.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wimperfect{
+    background-image: url('../imgs/home_imperfect.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wbird{
+    background-image: url('../imgs/home_bird.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wrighttime{
+    background-image: url('../imgs/home_righttime.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wdiagrams{
+    background-image: url('../imgs/home_diagrams.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wsocks{
+    background-image: url('../imgs/home_socks.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wjelly{
+    background-image: url('../imgs/home_jelly.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wseizethedate{
+    background-image: url('../imgs/home_seizethedate.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .small_menu{
+
+    height: 500px;
+    margin-top: 20vh;
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+
+  }
+
+
+    .menu{
+      position: fixed;
+      right:0px;
+      top: 0px;
+      background: #ec008c;
+      width: 50%;
+      height: 100vh;
+      opacity: 0;
+      transform: translateX(360px);
+      text-align: left;
+      z-index: 0;
+    }
+
+    .trans{
+      opacity: 1;
+      transform: translateX(0px);
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+    	-webkit-transition: all .8s ease-in-out;
+      transition: all .8s ease-in-out;
+      z-index: 0;
+    }
+
+  .work{
+    margin-left: auto;
+    width: 100%;
+    left: auto;
+    right: auto;
+    height: 300px;
+    background: #F6F1F6;
+    margin: 7px 0;
+    text-align:center;
+    padding: 0;
+    float: left;
+    box-sizing: border-box;
+    border: 3px solid white;
+    margin-bottom: -6px;
+  }
+
+  .logo_container{
+    width:74px;
+    height: 47px;
+    margin-top: 38px;
+    margin-left: 20px;
+    display: inline-block;
+  }
+
+  .menu_container, .menu_container2{
+    width: 60px;
+    height: 47px;
+    position: absolute;
+    right: 20px;
+    top: 78px;
+    display: inline-block;
+  }
+
+  #filter{
+    display: none;
+  }
+
+  .navigation_bar {
+    font-size: 15px;
+    list-style-type: none;
+    margin-top: -20px;
+    display: none;
+  }
+
+  .firstrow{
+    margin-top: 25px;
+  }
+
+  .footer{
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    float: left;
+    color: black;
+    cursor: default;
+  }
+
+  /* works */
+
+  .wsummerinny{
+    background-image: url('../imgs/home_summer.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .weverybodytalks{
+    background-image: url('../imgs/home_everybodytalks.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wmemory{
+    background-image: url('../imgs/home_memory.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wihadadream{
+    background-image: url('../imgs/home_ihadadream.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wshed{
+    background-image: url('../imgs/home_shed.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wchanchan{
+    background-image: url('../imgs/home_chanchan.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wcanalwalk{
+    background-image: url('../imgs/home_canalwalk.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wmmmm{
+    background-image: url('../imgs/home_mmmm.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wfabricme{
+    background-image: url('../imgs/home_fabricme.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wtnc{
+    background-image: url('../imgs/home_tnc.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wtokyo{
+    background-image: url('../imgs/home_tokyo.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wyellow{
+    background-image: url('../imgs/home_yellow.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wjulien{
+    background-image: url('../imgs/home_julien.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wimperfect{
+    background-image: url('../imgs/home_imperfect.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wbird{
+    background-image: url('../imgs/home_bird.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wrighttime{
+    background-image: url('../imgs/home_righttime.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wdiagrams{
+    background-image: url('../imgs/home_diagrams.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wsocks{
+    background-image: url('../imgs/home_socks.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wjelly{
+    background-image: url('../imgs/home_jelly.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .wseizethedate{
+    background-image: url('../imgs/home_seizethedate.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+}
+
+@import "ihadadream";
+@import "mmmm";
+@import "canalwalk";
+@import "chanchan";
+@import "fabric";
+@import "tnc";
+@import "julien";
+@import "tokyo";
+@import "everybodytalks";
+@import "yellow";
+@import "shed";
+@import "imperfect";
+@import "righttime";
+@import "summer";
+@import "icecream";
+@import "strawberry";
+@import "memory";
+@import "bird";
+@import "diagrams";
+@import "seizethedate";
+@import "about";
