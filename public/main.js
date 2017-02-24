@@ -13,7 +13,7 @@ $(document).ready(function(){
       url: title + "/" + title + ".html",
       success: function(results){
         $("#template").html(results);
-        $("#template").addClass('transitiony');
+      //  $("#template").addClass('transitiony');
 
       },
       complete: function(){
@@ -45,31 +45,21 @@ $(document).ready(function(){
     });
   }
 
-
   function openAbout(){
     $("body").removeClass();
-    $("body").addClass(title);
-    $("body").addClass('hidden');
+    $("body").addClass('about');
 
     $.ajax({
       context: $("#template"),
       dataType: "html",
-      url: "about" + ".html",
+      url: "about/about.html",
       success: function(results){
+        $("#template").html("").show();
         $("#template").html(results);
-      //  $("#template").addClass('transitiony');
-
       },
 
     });
   }
-
-
-
-
-  $(".about").click(function(){
-    openAbout();
-  });
 
   $(".work").click(function(){
 
@@ -101,4 +91,37 @@ $(document).ready(function(){
       $(".menu").addClass('trans_r');
   });
 
-})
+
+
+  // isotope
+  var $firstrow = $('.firstrow').isotope({
+    itemSelector: '.work',
+    layoutMode: 'fitRows',
+  });
+
+  // bind filter button click
+  $('#filter').on( 'click', 'a', function() {
+    if( $(this).attr('data-filter') == '.about'){
+
+      openAbout();
+    }
+    var filterValue = $( this ).attr('data-filter');
+    // use filterFn if matches value
+     $firstrow.isotope({ filter: filterValue });
+
+  });
+
+  // bind filter button click
+  $('#filter2').on( 'click', 'a', function() {
+
+    if( $(this).attr('data-filter') == '.about'){
+      openAbout();
+    }
+    var filterValue = $( this ).attr('data-filter');
+    // use filterFn if matches value
+     $firstrow.isotope({ filter: filterValue });
+  });
+
+
+
+});

@@ -21,6 +21,16 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   min-height: 101vh;
 }
+
+body ::selection{
+  background: yellow;
+}
+
+body ::-moz-selection{
+  background: yellow;
+}
+
+
 /*
 .welcome{
   position: fixed;
@@ -157,8 +167,8 @@ body {
 #filter{margin-top: -20px; position: absolute; right: 25px;}
 #filter li{font-size: 15px; margin-right: 45px; float: right; display: inline-block;}
 #filter li a:visited{color:black; cursor: pointer;}
-#filter li a:hover{color:#ec008c; cursor: pointer;}
-#filter li a:active{color: #ec008c; cursor: pointer;}
+#filter li a:hover{background:#FB0195; color:white; cursor: pointer;}
+#filter li a:active{background:#FB0195; color:white; cursor: pointer;}
 
 #filter2{
   padding-left: 0;
@@ -252,7 +262,9 @@ li a:visited {
   float: left;
   color: black;
   cursor: default;
+
 }
+
 
 a {
     text-decoration: none;

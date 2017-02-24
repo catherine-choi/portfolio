@@ -38,7 +38,7 @@
 
 
     <ul id="filter">
-      <li><a href="#about" class="about"> about</a></li>
+      <li><a href="#about" data-filter=".about" id="about"> about</a></li>
       <li><a href="#more" data-filter=".more"> more </a></li>
       <li><a href="#print" data-filter=".print"> print </a></li>
       <li><a href="#uiux" data-filter=".uiux"> ui/ux </a></li>
@@ -85,6 +85,9 @@
     <!--
     <div class="work print wksa" data-category="print"><div class="name"><p>KSA</br><span class="year">2016 – present</span></p></div></a></div>
     -->
+
+
+
   </div>
 
     <div class="menu">
@@ -92,13 +95,14 @@
         <img src="imgs/menu3.svg">
       </div>
     <div class=small_menu>
+
       <ul id="filter2">
         <li><a href="#motion" data-filter=".motion">motion </a></li>
         <li><a href="#branding" data-filter=".branding">branding </a></li>
         <li><a href="#uiux" data-filter=".uiux"> ui/ux </a></li>
         <li><a href="#print" data-filter=".print"> print </a></li>
         <li><a href="#more" data-filter=".more"> more </a></li>
-        <li><a href="about"> about </a></li>
+        <li><a href="#about" data-filter=".about" id="about"> about</a></li>
       </ul>
     </div>
     </div>
@@ -113,9 +117,8 @@
 -->
 
   <script src="js/jquery.fitvids.js"></script>
-  <script src="main.js"></script>
   <script src='http://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
-  <script src="java.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>
