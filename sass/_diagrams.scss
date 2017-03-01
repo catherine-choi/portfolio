@@ -257,6 +257,27 @@
   .first_row{
     margin-top: 40px;
   }
+
+  .image img{
+    width: 70%;
+    margin-bottom: 5px;
+    margin-right: 3px;
+  }
+
+  .image_s{
+    width: 75.5%;
+    margin-left: auto;
+    margin-right: auto;
+    float: inherit;
+    margin-bottom: 15px;
+  }
+
+
+  .image_s img{
+    width: 18%;
+    margin-bottom: 5px;
+    margin-right: 3px;
+  }
 }
 }
 
@@ -361,6 +382,27 @@
 
   .first_row{
     margin-top: 30px;
+  }
+
+  .image img{
+    width: 70%;
+    margin-bottom: 5px;
+    margin-right: 3px;
+  }
+
+  .image_s{
+    width: 75.5%;
+    margin-left: auto;
+    margin-right: auto;
+    float: inherit;
+    margin-bottom: 15px;
+  }
+
+
+  .image_s img{
+    width: 18%;
+    margin-bottom: 5px;
+    margin-right: 3px;
   }
 
 
@@ -468,6 +510,28 @@
     margin-top: -20px;
     display: none;
   }
+
+
+    .image img{
+      width: 90%;
+      height:auto;
+      margin-bottom: 5px;
+      margin-right: 3px;
+    }
+
+
+    .image_s{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      float: inherit;
+    }
+
+    .image_s img{
+      width: 16.5%;
+      height:auto;
+      margin-bottom: 5px;
+    }
 
 
 }

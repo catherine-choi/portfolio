@@ -650,7 +650,7 @@ a {
     background-position: center;
     background-size: cover; }
   .wbird {
-    background-image: url("../imgs/home_bird.jpg");
+    background-image: url("../imgs/home_bird.png");
     background-position: center;
     background-size: cover; }
   .wrighttime {
@@ -8381,7 +8381,21 @@ a {
     top: 98px;
     display: inline-block; }
   .diagrams .first_row {
-    margin-top: 40px; } }
+    margin-top: 40px; }
+  .diagrams .image img {
+    width: 70%;
+    margin-bottom: 5px;
+    margin-right: 3px; }
+  .diagrams .image_s {
+    width: 75.5%;
+    margin-left: auto;
+    margin-right: auto;
+    float: inherit;
+    margin-bottom: 15px; }
+  .diagrams .image_s img {
+    width: 18%;
+    margin-bottom: 5px;
+    margin-right: 3px; } }
 
 @media (max-width: 800px) {
   .diagrams .title_image {
@@ -8458,7 +8472,21 @@ a {
     margin-top: -20px;
     display: none; }
   .diagrams .first_row {
-    margin-top: 30px; } }
+    margin-top: 30px; }
+  .diagrams .image img {
+    width: 70%;
+    margin-bottom: 5px;
+    margin-right: 3px; }
+  .diagrams .image_s {
+    width: 75.5%;
+    margin-left: auto;
+    margin-right: auto;
+    float: inherit;
+    margin-bottom: 15px; }
+  .diagrams .image_s img {
+    width: 18%;
+    margin-bottom: 5px;
+    margin-right: 3px; } }
 
 @media (max-width: 600px) {
   .diagrams .title_image {
@@ -8533,7 +8561,21 @@ a {
     font-size: 15px;
     list-style-type: none;
     margin-top: -20px;
-    display: none; } }
+    display: none; }
+  .diagrams .image img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 5px;
+    margin-right: 3px; }
+  .diagrams .image_s {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    float: inherit; }
+  .diagrams .image_s img {
+    width: 16.5%;
+    height: auto;
+    margin-bottom: 5px; } }
 
 .seizethedate .logo_container {
   width: 74px;
